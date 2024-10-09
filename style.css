@@ -1,10 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
+/* Calibre font with different weights */
 @font-face {
     font-family: 'Calibre';
-    src: url('./fonts/calibre/CalibreRegular.otf');
-    src: url('./fonts/calibre/CalibreSemibold.otf');
+    src: url('./fonts/calibre/CalibreRegular.woff2') format('woff2'),
+         url('./fonts/calibre/CalibreRegular.woff') format('woff');
+    font-weight: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Calibre';
+    src: url('./fonts/calibre/CalibreSemibold.woff2') format('woff2'),
+         url('./fonts/calibre/CalibreSemibold.woff') format('woff');
+    font-weight: 600;
+    font-display: swap;
+}
+
+/* SF Mono font */
+@font-face {
     font-family: 'mono-sans';
-    src: url('./fonts/sf-mono-cufonfonts-webfont/SFMonoRegular.woff');
+    src: url('./fonts/sf-mono-cufonfonts-webfont/SFMonoRegular.woff2') format('woff2'),
+         url('./fonts/sf-mono-cufonfonts-webfont/SFMonoRegular.woff') format('woff');
+    font-weight: normal;
+    font-display: swap;
 }
 :root{
     --text-color:#51CFB6;
@@ -341,6 +360,10 @@ body{
 .work-card .tech-a{
     background-image:url('./Assets/findyour.png')
 }
+.work-card .imdb-desk{
+    background-image:url('./Assets/imdb.png')
+
+}
 .work a:nth-child(even){
     left:-150px;
     z-index: -1;
@@ -599,8 +622,13 @@ body{
         background-position:center;
         background-size:cover;
     }
-    .imdb-card{
+    .imdb-card-c{
         background: linear-gradient(rgba(10, 25, 47, 1), rgba(10,25,47,.8)), url('./Assets/daClothin.png');
+        background-position:center;
+        background-size:cover;
+    }
+    .imdb-card-d{
+        background: linear-gradient(rgba(10, 25, 47, 1), rgba(10,25,47,.8)), url('./Assets/imdb.png');
         background-position:center;
         background-size:cover;
     }
