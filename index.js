@@ -11,7 +11,7 @@ const navLink = document.querySelectorAll('.nav-a');
     })
   })
   if(nav.classList.contains('active')){
-    console.log(true);
+   
   }
 const companies = document.querySelectorAll('.company');
 const roles = document.querySelectorAll('.role');
@@ -37,7 +37,6 @@ function removeClasses() {
 
 function setActiveCompany(newCompany) {
   activeCompany = newCompany;
-  console.log(activeCompany);
   updateRoles();
 }
 
