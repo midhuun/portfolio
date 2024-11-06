@@ -36,8 +36,70 @@ html{
 body{
     margin:6px;
     padding: 0;
-    font-family: Calibre, Inter, "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
+    font-family: 'Calibre', sans-serif;
+    font-weight: normal;
     background-color:var(--bg-color);
+}
+code, pre {
+    font-family: 'mono-sans', monospace;
+    font-weight: normal;
+}
+.loading-text {
+    animation: pulse 1s infinite;
+}
+
+/* Keyframes for pulsing animation */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.8;
+    }
+}
+.loading {
+    position: fixed;
+    inset: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: #0a192f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 2rem;
+    z-index: 9999;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+.loading.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+.loading h1{
+    font-family: 'Kaushan Script', cursive;
+    color:var(--text-color) ;
+    margin-left: 20px;
+    font-size: 24px;
+    text-align: center;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: 3px solid;
+
+}
+.hidden{
+    opacity: 0 !important;
+    transform: translateX(-100%) !important;
+    filter: blur(5px) !important;
+    transition: opacity 2s ease, transform 2s ease, filter 2s ease;
+}
+.show{
+    opacity: 1 !important;
+    transform: translateX(0) !important;
+    filter: blur(0) !important;
 }
 .container{
     margin: 0px 10px;

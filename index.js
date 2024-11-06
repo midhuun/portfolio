@@ -51,3 +51,26 @@ function updateRoles() {
   });
 }
 updateRoles();
+const elements = document.querySelectorAll('.hidden');
+console.log(elements);
+
+const observer = new IntersectionObserver((entries)=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+           entry.target.classList.add("show");
+      observer.unobserve(entry.target);
+    }
+    else{
+      entry.target.classList.remove("show");
+    }
+  },)
+},)
+
+elements.forEach(element=> observer.observe(element));
+document.addEventListener("DOMContentLoaded", () => {
+  const loadingElement = document.querySelector(".loading");
+
+  setTimeout(() => {
+      loadingElement.classList.add("hidden");
+  }, 2000); // 2 seconds
+});

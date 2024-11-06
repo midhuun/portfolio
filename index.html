@@ -13,6 +13,9 @@
 <link rel="preload" href="./fonts/sf-mono-cufonfonts-webfont/SFMonoRegular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 </head>
 <body>
+  <div class="loading ">
+    <h1 class="loading-text">M</h1>
+  </div>
    <div class="container">
     <div class="social">
       <a href="https://github.com/midhuun"><img src="./Assets/github (1).svg" alt=""></a>
@@ -43,19 +46,19 @@
         <div class="line"></div>
         <div class="line"></div>
     </div>
-     <div class="content">
-        <div class="home">
+     <div class="content hidden">
+        <div class="home ">
         <p>Hi , my name is </p>
-        <h1>Midhun Kumar</h1>
+        <h1 >Midhun Kumar</h1>
         <h1>I craft web applications.</h1>
         <h3>Experienced Front-end developer with a background as an Associate Analyst at Deloitte and a passion for optimizing web performance. On a journey to master full-stack development, blending top-tier front-end skills with growing expertise in caching and MongoDB to create seamless and efficient web solutions</h3>      
       <button><a href="#contact">Feel free to Ask !</a></button>
      </div>
-     <div id="about" class="about">
+     <div id="about" class="about hidden">
         <h4><span>01.</span>About Me</h4>
        <div class="about-card">
         <h3>
-          I’m a passionate Front-End Developer with experience as an Associate Analyst at Deloitte developing VBA solutions to clients as a EPIC developer. Through freelancing projects and internships, I developed a strong interest in website performance optimizations, which led me to learn Next.js and dive deeper into full-stack development, including caching strategies and MongoDB for backend storage. I’m currently seeking opportunities as a Front-End Developer, Full-Stack Developer, or freelancer, where I can continue to enhance my skills and contribute to impactful projects.
+          I’m a passionate Front-End Developer with experience as an Associate Analyst at Deloitte developing VBA solutions to clients as a EPIC developer. Through freelancing projects and, I developed a strong interest in website performance optimizations, which led me to learn Next.js and dive deeper into full-stack development, including caching strategies and MongoDB for backend storage. I’m currently seeking opportunities as a Front-End Developer, Full-Stack Developer, or freelancer, where I can continue to enhance my skills and contribute to impactful projects.
           <span>
             <ul class="split-list">
                 <li>Javascript</li>
@@ -70,7 +73,7 @@
          <div class="img-container"><img src="./Assets/Midhun.jpg" alt=""></div>
         </div>
      </div>
-     <div id="exp" class="exp">
+     <div id="exp" class="exp hidden">
         <h4><span>02.</span>Work Experience</h4>
         <div id="exp-card" class="exp-card">
           <div class="companies">
@@ -110,7 +113,7 @@
     <div id="work" class="work">
         <h4><span>03.</span>Portfolio of My Past Work</h4>
         <div class="work-mobile">
-            <div class="mob-card">
+            <div class="mob-card hidden">
               <h3>Featured Project</h3>
               <h4>Adithya Bio-Agri</h4>
               <p>A website for Shri Adithya Bio-Agri a company in Coimbatore. It showcases their products, services, and company information effectively</p>
@@ -126,7 +129,7 @@
                  <h6 onclick="window.location.href='http://shriadithya.com/'"><img src="./Assets/external-link.svg" alt=""></h6>
               </div>
             </div>
-            <div class="mob-card imdb-card-c">
+            <div class="mob-card hidden imdb-card-c">
               <h3>Featured Project</h3>
               <h4>DA Clothing</h4>
               <p>An optimized e-commerce website for DA-Clothing using ReactJS and Tailwind CSS, featuring
@@ -143,7 +146,7 @@
                 <h6 onclick="window.location.href='https://daclothingmanufacturer.com/'"><img src="./Assets/external-link.svg" alt=""></h6>
               </div>
             </div>
-            <div class="mob-card imdb-card-d">
+            <div class="mob-card hidden imdb-card-d">
               <h3>Featured Project</h3>
               <h4>SK Home Appliances</h4>
               <p>Built a full-stack web app for SK Home Appliances with an admin dashboard for streamlined management. Implemented performance optimizations to improve loading times, ensuring a fast, responsive, and user-friendly experience.</p>
@@ -158,7 +161,7 @@
                 <h6 onclick="window.location.href='https://sri-sk-home-appliances.vercel.app/'"><img src="./Assets/external-link.svg" alt=""></h6>
               </div>
             </div>
-            <div class="mob-card tech-card">
+            <div class="mob-card hidden tech-card">
               <h3>Featured Project</h3>
               <h4>Find Your Spot</h4>
               <p>An Next.js-based platform for exploring nearby places, powered by AI. It offers personalized recommendations, helping users find spots that match their priorities and budget, enhancing their travel experience</p>
@@ -176,7 +179,7 @@
             </div>
             
         </div>
-        <div class="work-card">
+        <div class="work-card hidden">
             <a href="https://shriadithya.com/"></a>
         <div class="content">
             <h1 class="project"><span>Featured Project</span></h1>
@@ -195,7 +198,7 @@
           </div>
         </div> 
         </div>
-        <div class="work-card">
+        <div class="work-card hidden">
         <div class="content">
             <h1 class="project"><span>Featured Project</span></h1>
           <h1>DA Clothing</h1>
@@ -215,7 +218,7 @@
         </div> 
         <a class="imdb-a" href="https://daclothingmanufacturer.com/"></a>
         </div>
-        <div class="work-card imdb-desk">
+        <div class="work-card hidden imdb-desk">
           <div class="content">
               <h1 class="project"><span>Featured Project</span></h1>
             <h1>SK Home Appliances</h1>
@@ -233,7 +236,7 @@
           </div> 
           <a class="imdb-desk" href="https://sri-sk-home-appliances.vercel.app/"></a>
           </div>
-        <div class="work-card">
+        <div class="work-card hidden">
             <a class="tech-a" href="https://findyourspot.vercel.app/"></a>
             <div class="content">
                 <h1 class="project"><span>Featured Project</span></h1>
@@ -254,7 +257,7 @@
             </div> 
             </div>
                 </div>
-               <div id="contact" class="contact">
+               <div id="contact" class="contact hidden">
                 <h1><span style="color: #51CFB6;">04.What's Next?</span></h1>
                 <h2 class="touch">Get in Touch</h2>
                 <p>Need a powerful, optimized, and SEO-friendly website built with advanced technologies? I'm here to help! As a dedicated web developer, I'm passionate about delivering high-performance solutions. Feel free to reach out for collaboration on your next project. Thank you!</p>                <button onclick="window.location.href='mailto:midhunkumar2k2@gmail.com'"  class="contact-btn">Say Hello</button>
