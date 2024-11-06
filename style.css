@@ -349,7 +349,7 @@ body{
 .github{
     background-color:transparent;
     border:none;
-    cursor: pointer;
+    cursor: pointer !important; 
 }
 .work a{
     background-image:url('./Assets/shriAdithya.png')
