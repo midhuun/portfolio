@@ -54,30 +54,40 @@ updateRoles();
 const elements = document.querySelectorAll('.hidden');
 console.log(elements);
 
-const observer = new IntersectionObserver((entries)=>{
-  entries.forEach(entry=>{
-    if(entry.isIntersecting){
-        if(entry.target.classList.contains('content')){
-          setTimeout(()=>{
-            entry.target.classList.add("show");
-            console.log("Pl");
-            
-          },2500)
-        }
-           entry.target.classList.add("show");
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      if (entry.target.classList.contains('content')) {
+        setTimeout(() => {
+          entry.target.classList.add("show");    
+        }, 1500);
+      }
+      entry.target.classList.add("show");
       observer.unobserve(entry.target);
-    }
-    else{
-      if(entry.target.classList.contains('content')){
-        setTimeout(()=>{
+    } else {
+      if (entry.target.classList.contains('content')) {
+        setTimeout(() => {
           entry.target.classList.remove("show");
           console.log("Pl");
-          
-        },2300)
+        }, 2300);
       }
       entry.target.classList.remove("show");
     }
-  },)
-},)
+  });
+}, { threshold: 0.1 }); 
 
-elements.forEach(element=> observer.observe(element));
+elements.forEach(element => observer.observe(element));
+
+document.addEventListener('DOMContentLoaded', () => {
+  elements.forEach(element => {
+    if (isElementInViewport(element)) {
+      element.classList.add("show");
+    }
+  });
+});
+
+// Helper function to check if an element is in the viewport
+function isElementInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return rect.top >= 0 && rect.left >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && rect.right <= (window.innerWidth || document.documentElement.clientWidth);
+}
